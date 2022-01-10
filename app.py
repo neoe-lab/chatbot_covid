@@ -1,6 +1,5 @@
 from flask import Flask, request, abort
 import requests
-from gunicorn import *
 from config import *
 from linebot import (
     LineBotApi, WebhookHandler
@@ -74,6 +73,3 @@ def handle_message(event):
     line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=reply_message))
-
-if __name__ == "__main__":
-    app.run()
