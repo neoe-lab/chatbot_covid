@@ -1,5 +1,6 @@
 from flask import Flask, request, abort
 import requests
+from gunicorn import *
 from config import *
 from linebot import (
     LineBotApi, WebhookHandler
